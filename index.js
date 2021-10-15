@@ -22,3 +22,4 @@ currentCity.innerHTML = "București";
 
 
 displayCurrentWeather(localStorageCity);
+displayWeatherForecast(localStorageCity);

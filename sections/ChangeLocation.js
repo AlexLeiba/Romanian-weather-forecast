@@ -1,7 +1,17 @@
 const bucuresti = document.querySelector(".bucuresti");
+const iasi = document.querySelector(".iasi");
 const timisoara = document.querySelector(".timisoara");
+const clujNapoca = document.querySelector(".cluj-napoca");
+const constanta = document.querySelector(".constanta");
+const craiova = document.querySelector(".craiova");
+const brasov = document.querySelector(".brasov");
+const galati = document.querySelector(".galati");
+const ploiesti = document.querySelector(".ploiesti");
 const oradea = document.querySelector(".oradea");
-const ungheni = document.querySelector(".ungheni");
+const braila = document.querySelector(".braila");
+const arad = document.querySelector(".arad");
+
+
 
 
 
@@ -14,6 +24,7 @@ function updateCity(city){
 
   currentCity.innerHTML = city;
   displayCurrentWeather(city);
+  displayWeatherForecast(city);
 //   la fiecare click pe un anumit orash, datele cu orasul respectiv se va salva in localStorage, si pagina va ramane aceiasi la "refresh"
   localStorage.setItem("city", city);
 }
@@ -23,15 +34,47 @@ bucuresti.addEventListener("click",function() {
    
 });
 
+iasi.addEventListener("click", function () {
+updateCity("Iași");
+
+});
+
 timisoara.addEventListener("click", function () {
 updateCity("Timișoara");
+});
 
+clujNapoca.addEventListener("click", function () {
+updateCity("Cluj-Napoca");
+});
+
+constanta.addEventListener("click", function () {
+  updateCity("Constanța");
+});
+
+craiova.addEventListener("click", function () {
+  updateCity("Craiova");
+});
+
+brasov.addEventListener("click", function () {
+  updateCity("Brașov");
+});
+
+galati.addEventListener("click", function () {
+  updateCity("Galați");
+});
+
+ploiesti.addEventListener("click", function () {
+  updateCity("Ploiești");
 });
 
 oradea.addEventListener("click", function () {
-updateCity("Oradea")
+  updateCity("Oradea");
 });
 
-ungheni.addEventListener("click", function () {
-updateCity("Ungheni")
+braila.addEventListener("click", function () {
+  updateCity("Brăila");
+});
+
+arad.addEventListener("click", function () {
+  updateCity("Arad");
 });

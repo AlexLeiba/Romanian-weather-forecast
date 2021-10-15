@@ -11,6 +11,7 @@ function displayCurrentWeather(city){
     fetch(currentWeatherEndPoint)
       .then((response) => response.json())
       .then((json) => {
+        console.log(json)
         // extragerea tuturor valorilor din json  (adica din obiect)(cu obiect destructuring)
         const { weather, main, wind, dt ,name} = json;
 
@@ -25,17 +26,31 @@ function displayCurrentWeather(city){
 
         // apelez codul iconitei cu [] deoarece Weather este un array
         const iconUrl = getIconUrl(weather[0].icon);
+
+        const humidity = main.humidity;
         
         // afisam pe pagina web/ in interiorul fatch, deoarece valoarea lui .then doar aici este vizibila
         currentWeatherSection.innerHTML = `
-        <h2>${name}</h2>
-        <p><span class="fs-4"> ${day}</span>,<strong> ${hours}</strong> </p>
-        <h4><strong>${temperature}°C</strong> </h4>
-        <strong><p>Se simte ca:${feelsLike}°C</p></strong>
-        <img src="${iconUrl}" alt="">
-        <p><strong>Vantul: ${windkmPerHour}Km/h </strong> </p>
+      <div class="d-flex justify-content-around " >
+        <div>
+          <h2>${name}</h2>
+          <p><span class="fs-4"> ${day}</span>,<strong> ${hours}</strong> </p>
+          <span><strong class="fs-3">${temperature}°C <img src="${iconUrl}" alt=""></strong></span>
+          
+        </div>
 
-        <p>${description} </p>
+        <div>
+          
+           <p class="text-capitalize fs-5" >${description} </p>
+          <p class="fs-5">Se simte ca:<strong> ${feelsLike}°C</strong></p>
+        
+          <p class="fs-5">Vântul: <strong> ${windkmPerHour}Km/h </strong> </p>
+          <p class="fs-5">Umiditatea aerului: <strong>${humidity}%</strong> </p>
+
+         
+        </div>
+
+      </div>
         
         
         

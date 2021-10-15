@@ -26,13 +26,13 @@ function getDay(valoareaUtc){
     let day;
     switch (dayIndex) {
       case 0:
-        day = "Duminica";
+        day = "Duminică";
         break;
       case 1:
         day = "Luni";
         break;
       case 2:
-        day = "Marti";
+        day = "Marți";
         break;
       case 3:
         day = "Miercuri";
@@ -44,7 +44,7 @@ function getDay(valoareaUtc){
         day = "Vineri";
         break;
       case 6:
-        day = "Sambata";
+        day = "Sâmbătă";
         break;
 
         

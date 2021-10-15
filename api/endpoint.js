@@ -14,7 +14,7 @@ function getCurrentWeatherEndPoint(city){
 
 function getForecastEndPoint(city){
    
-    return `api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${API_KEY}`;
+    return `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${API_KEY}&lang=ro&units=metric`;
 }
 
 

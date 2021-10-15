@@ -10,6 +10,14 @@ const ploiesti = document.querySelector(".ploiesti");
 const oradea = document.querySelector(".oradea");
 const braila = document.querySelector(".braila");
 const arad = document.querySelector(".arad");
+const pitesti = document.querySelector(".pitesti");
+const sibiu = document.querySelector(".sibiu");
+const bacau = document.querySelector(".bacau");
+const targuMures = document.querySelector(".targuMures");
+const baiaMare = document.querySelector(".baiaMare");
+const buzau = document.querySelector(".buzau");
+const botosani = document.querySelector(".botosani");
+const satuMare = document.querySelector(".satuMare");
 
 
 function updateCity(city){
@@ -72,4 +80,36 @@ braila.addEventListener("click", function () {
 
 arad.addEventListener("click", function () {
   updateCity("Arad");
+});
+
+pitesti.addEventListener("click", function () {
+  updateCity("Pitești");
+});
+
+sibiu.addEventListener("click", function () {
+  updateCity("Sibiu");
+});
+
+bacau.addEventListener("click", function () {
+  updateCity("Bacău");
+});
+
+targuMures.addEventListener("click", function () {
+  updateCity("Târgu Mureș");
+});
+
+baiaMare.addEventListener("click", function () {
+  updateCity("Baia Mare");
+});
+
+buzau.addEventListener("click", function () {
+  updateCity("Buzău");
+});
+
+botosani.addEventListener("click", function () {
+  updateCity("Botoșani");
+});
+
+satuMare.addEventListener("click", function () {
+  updateCity("Satu Mare");
 });

@@ -1,5 +1,4 @@
-// functia care transforma unix in data standarta
-// din (dt) trebuie de extras ziua, si ora
+
 
 function getHours(valoareaUtc){
 let date = new Date(valoareaUtc * 1000);
@@ -7,7 +6,6 @@ let date = new Date(valoareaUtc * 1000);
 let hours = date.getHours();
 let minutes = date.getMinutes();
 
-// un if pentru a avea fiecare ora mai mica de ora 10 un zero in fatza ex: 04;
 if(hours < 10){
     hours = "0" + hours ;
 }
@@ -52,6 +50,22 @@ function getDay(valoareaUtc){
     return day;
 }
 
+// button Scroll
+const buttonScroll = document.querySelector(".button-scroll");
 
+buttonScroll.addEventListener("click", function(){
+  window.scrollTo({
+    top: 10,
+    behavior: "smooth"
+  })
+});
+
+document.addEventListener("scroll", function(){
+  if(window.scrollY > 1200){
+    buttonScroll.style.visibility = "visible";
+  } else {
+    buttonScroll.style.visibility = "hidden";
+  }
+})
 
 

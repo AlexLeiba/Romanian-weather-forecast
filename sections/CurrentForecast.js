@@ -12,19 +12,17 @@ const currentForecastEndPoint = getForecastEndPoint(city);
       const { list }= json;
       console.log(json)
 
-currentForecastSection.innerHTML = "";
-// vreau sa adaug fiecare cheie din acest obiect sa fie (o zi din saptamina)
+    currentForecastSection.innerHTML = "";
+
     const daysForecast ={};
 
     list.forEach(forecast => {
     const { dt } = forecast;
     const daysOfWeek = getDay(dt);
-    // ziua saptaminii va fi in aceasta constanta
+   
     
 
-    // adaug o cheie noua intrun obiect:(daca cheia nui un string, si ii o variabila se pune intre paranteze patrate)
 
-//Daca am deja ziua saptaminii pentru ziua respectiva (se va adauga in obiect cu push continutul lui (forecast))
     if(daysForecast[daysOfWeek] !== undefined){
    daysForecast[daysOfWeek].push(forecast);
     } else {
@@ -33,11 +31,10 @@ currentForecastSection.innerHTML = "";
     
     });
     
-    // dupa ce am plecat de la un array cu 40 de elemente,am extras zilele saptaminii intrun obiect, si acum vreau sa il parcurc pentru a afisa pe ecran continutul lui..
+   
 
     for ( const property in daysForecast){
-      // cheia este proprietatea
-      // valoarea obiectului este: obiectul[property]
+     
 
       currentForecastSection.innerHTML += `
       <div  class="mt-5">
@@ -48,7 +45,7 @@ currentForecastSection.innerHTML = "";
     
 
       const list = daysForecast[property] ;
-      //   iteram prin (lista)40 predictii
+      
       list.forEach((forecast) => {
         //  object destructuring
         const { dt, main, weather } = forecast;
@@ -79,4 +76,4 @@ currentForecastSection.innerHTML = "";
      
     
       });
-}
+    }

@@ -12,20 +12,15 @@ const braila = document.querySelector(".braila");
 const arad = document.querySelector(".arad");
 
 
-
-
-
-
-// o functie care micsoreaza codul repetitiv, si la apelarea caruia se vor modifica orasul de pe pagina web
 function updateCity(city){
   
-  // variabila la textul de pe web, care se va schimba la "click"
+
   const currentCity = document.querySelector(".orasul");
 
   currentCity.innerHTML = city;
   displayCurrentWeather(city);
   displayWeatherForecast(city);
-//   la fiecare click pe un anumit orash, datele cu orasul respectiv se va salva in localStorage, si pagina va ramane aceiasi la "refresh"
+
   localStorage.setItem("city", city);
 }
 

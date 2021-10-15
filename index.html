@@ -18,6 +18,8 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
   </head>
   <body>
     <header class="bg-primary d-flex justify-content-center align-items-center">
@@ -114,8 +116,14 @@
       crossorigin="anonymous"
     ></script>
 
+    <button class="button-scroll">
+       <span class="material-icons">
+       expand_less
+       </span> 
+    </button>
+
     <script src="api/endpoint.js"></script>
-    <!-- // acest script ar trebui sa fie primul, la citirea programului mai intii se va egzecuta API -->
+    <!-- // acest script ar trebui sa fie primul, la citirea programului mai intii se va citi API -->
 
     <script src="sections/CurrentWeather.js"></script>
 
@@ -123,7 +131,7 @@
 
     <script src="utilsFunctions/date.js"></script>
 
-    <script src="utilsFunctions/whetherFunctions.js"></script>
+    <script src="utilsFunctions/wheatherFunctions.js"></script>
 
     <script src="sections/CurrentForecast.js"></script>
 
